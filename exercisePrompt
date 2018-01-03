@@ -1,0 +1,15 @@
+Due to budget cuts, we'll need to cut back on the days of Christmas in this song. Use a template string to produce the new song given the number of days as a number.
+
+daysOfChristmas(5) should produce the following string:
+
+	On the 1st day of Christmas my true love gave to me, a partridge in a pear tree
+	On the 2nd day of Christmas my true love gave to me, two turtle doves and a partridge in a pear tree
+	On the 3rd day of Christmas my true love gave to me, three french hens two turtle doves and a partridge in a pear tree
+	On the 4th day of Christmas my true love gave to me, four calling birds three french hens two turtle doves and a partridge in a pear tree
+	On the 5th day of Christmas my true love gave to me, five golden rings four calling birds three french hens two turtle doves and a partridge in a pear tree
+
+
+-Include line breaks with \n
+-Don't repeat yourself!
+-We'll only test up to 5
+-If no argument or 0 is given, return "I got coal for Christmas"
