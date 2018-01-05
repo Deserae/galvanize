@@ -1,5 +1,3 @@
-var arr = [1,4,7];
-
 function sum(arr) {
   var sum = 0;
   for (var i = 1; i < arr.length; i++) {
@@ -9,14 +7,39 @@ function sum(arr) {
   return sum;
 }
 
+//////////////////////////////////////////////////
+var arr = [1,2,3,4];
 function product(arr) {
-  // YOUR CODE HERE
+    if (arr.length === 0){
+        return 1;
+    }
+    
+    console.log(arr);
+    var product = 1;
+    for (var i=0; i< arr.length; i++){
+    product = product * product[i];
+    console.log(product);
+    }
+    console.log("product " + product);
+    return product;
 }
+product(arr);
+//returning NAN
 
+//////////////////////////////////////////////                
 function filterPassingGrades(arr) {
-  // YOUR CODE HERE
+  
+  function grades(arr) {
+  return arr >= 70;
+  }
+
+  var filtered = arr.filter(grades);
+  console.log(filtered);
+  return filtered;
+
 }
 
+////////////////////////////////////////
 function replace(arr, from, to) {
   // YOUR CODE HERE
 }
