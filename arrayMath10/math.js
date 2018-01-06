@@ -8,23 +8,16 @@ function sum(arr) {
 }
 
 //////////////////////////////////////////////////
-var arr = [1,2,3,4];
 function product(arr) {
     if (arr.length === 0){
         return 1;
     }
-    
-    console.log(arr);
     var product = 1;
     for (var i=0; i< arr.length; i++){
-    product = product * product[i];
-    console.log(product);
+    product = product * arr[i];
     }
-    console.log("product " + product);
     return product;
 }
-product(arr);
-//returning NAN
 
 //////////////////////////////////////////////                
 function filterPassingGrades(arr) {
