@@ -7,7 +7,7 @@ function sum(arr) {
   return sum;
 }
 
-//////////////////////////////////////////////////
+//2////////////////////////////////////////////////
 function product(arr) {
     if (arr.length === 0){
         return 1;
@@ -19,7 +19,7 @@ function product(arr) {
     return product;
 }
 
-//////////////////////////////////////////////                
+//3////////////////////////////////////////////                
 function filterPassingGrades(arr) {
   
   function grades(arr) {
@@ -32,11 +32,24 @@ function filterPassingGrades(arr) {
 
 }
 
-////////////////////////////////////////
+//4//////////////////////////////////////
 function replace(arr, from, to) {
-  // YOUR CODE HERE
+  var target = from;
+  var newnum = to;
+  var newArray = [];
+
+  arr.forEach(function(item) {
+      if (item === target){
+        newArray.push(newnum);
+      } else {
+        newArray.push(item);
+      }
+  });
+
+  return newArray;
 }
 
+/////////////////////////////////////////////////
 function max(arr) {
   // YOUR CODE HERE
 }
