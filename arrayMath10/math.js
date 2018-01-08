@@ -1,9 +1,8 @@
 function sum(arr) {
   var sum = 0;
-  for (var i = 1; i < arr.length; i++) {
+  for (var i = 0; i < arr.length; i++) {
    sum += arr[i];
   }
-  console.log(sum);
   return sum;
 }
 
@@ -27,7 +26,6 @@ function filterPassingGrades(arr) {
   }
 
   var filtered = arr.filter(grades);
-  console.log(filtered);
   return filtered;
 
 }
@@ -49,19 +47,30 @@ function replace(arr, from, to) {
   return newArray;
 }
 
-/////////////////////////////////////////////////
+//5///////////////////////////////////////////////
 function max(arr) {
-  // YOUR CODE HERE
+    return Math.max(...arr);
 }
 
+//6/////////////////////////////////////////////
 function min(arr) {
-  // YOUR CODE HERE
+    return Math.min(...arr);
 }
 
+//7/////////////////////////////////////////
 function mean(arr) {
-  // YOUR CODE HERE
+  if (arr.length === 0){
+        return null;
+  }
+
+  var sum = 0;
+  for (var i = 0; i < arr.length; i++) {
+   sum += arr[i];
+  }
+  return sum/(arr.length);
 }
 
+//8////////////////////////////////
 function median(arr) {
-  // YOUR CODE HERE
+
 }
