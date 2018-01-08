@@ -72,5 +72,23 @@ function mean(arr) {
 
 //8////////////////////////////////
 function median(arr) {
+  if (arr.length === 0){
+        return null;
+  }
 
+  var sortedArr = arr.sort();
+  
+  //even num array
+  if ((sortedArr.length)%2 ===0){
+    var firstMiddle = ((sortedArr.length/2) - 1);
+    var secondMiddle = (sortedArr.length/2);
+    console.log("secondMiddle" + secondMiddle);
+    var evenArr = [sortedArr[firstMiddle], sortedArr[secondMiddle]];
+    console.log("evenarr" + evenArr);
+    return mean(evenArr);
+    //odd num array
+  } else {
+    var middle = Math.floor((sortedArr.length)/2);
+    return sortedArr[middle];
+  }
 }
