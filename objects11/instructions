@@ -1,0 +1,50 @@
+Define a function named addKey accepts any object, a key name, and a value, and adds the designated key and value to that Object. Make sure to return the object after modifying.
+
+      Example:
+
+        let student= {name: "Chris", city: "Benin"};
+
+        addKey(student, "hex", "#AABBCC")
+        // returns   {name: "Chris", city: "Benin", hex: "#AABBCC";
+
+        addKey(student, "color", "blue")
+        // returns   {name: "Chris", city: "Benin", color: "blue";
+
+        addKey(student, "active", true)
+        // returns   {name: "Chris", city: "Benin", active: true;
+
+Define a function named deleteKey accepts any object and a key name, and deletes that key from the Object. Make sure to return the object after modifying.
+
+      Example:
+
+        let student= {name: "Chris", city: "Benin"};
+
+        deleteKey(student, "name")
+        // returns   {city: "Benin"};
+
+        deleteKey(student, "city")
+        // returns   {name: "Chris"};
+
+Define a function named createOrIncrementValue accepts any object, a key name, and a value to increment the value of that key by. If the key already exists, increment the value. If it DOESN'T exist, then create the key and then assign the value. Make sure to return the object after modifying.
+
+      Examples:
+
+         let anike = {name: "Anike", city: "Lagos", age: 39};
+         let joshua = {name: "Joshua", city: "Jerusalem", age: 45};
+         let chris= {name: "Chris", city: "Benin"};
+
+
+          createOrIncrementValue(anike, "age", 1)
+          // returns   {name: "Anike", city: "Lagos", age: 40};
+          // See what happened?  
+          // The age key already existed in the object,
+          // so we incremented it by the passed in value which was 1
+
+          createOrIncrementValue(joshua, "age", 5)
+          // returns   {name: "Anike", city: "Lagos", age: 50};
+          // The age key already existed in the object,
+          // so we incremented it by the passed in value which was 5
+
+          createOrIncrementValue(chris, "age", 5)
+          // returns   {name: "Chris", city: "Benin", age: 5};
+          // The age key DID NOT EXIST so we created it with a value of 5

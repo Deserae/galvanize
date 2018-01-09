@@ -77,14 +77,12 @@ function median(arr) {
   }
 
   var sortedArr = arr.sort();
-  
+
   //even num array
   if ((sortedArr.length)%2 ===0){
     var firstMiddle = ((sortedArr.length/2) - 1);
     var secondMiddle = (sortedArr.length/2);
-    console.log("secondMiddle" + secondMiddle);
     var evenArr = [sortedArr[firstMiddle], sortedArr[secondMiddle]];
-    console.log("evenarr" + evenArr);
     return mean(evenArr);
     //odd num array
   } else {
