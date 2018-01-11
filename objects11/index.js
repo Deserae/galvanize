@@ -21,3 +21,33 @@ function createOrIncrementValue(obj, key, increment){
 		return obj;
 	}	
 }
+
+/////////////////////////////////////////
+//Traverse the following array of objects creating a variable called oldest 
+//which contains the name of the oldest person
+
+var people = [
+  {
+    'name': 'Frank',
+    'age': 43
+  },
+  {
+    'name': 'Mary',
+    'age': 37
+  }
+];
+
+
+var oldestAge = 0;
+for (var i =0; i < people.length; i++){
+    var obj = people[i];
+    
+    for (var key in obj){
+        var age = obj[key];
+        if (age > oldestAge){
+            var oldest = obj["name"];
+            oldestAge = age;
+            console.log(oldest);
+        }
+    }
+} 
