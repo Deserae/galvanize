@@ -5,18 +5,50 @@
 
 function addStars(word, num) {
 	var starWord = "";
-	//first stars
-	for (var i = 0; i < num; i++ ){
-		starWord = starWord.concat('*');
+	var loop = function (starWord){
+    	for (var i = 0; i < num; i++ ){
+    		starWord = starWord.concat('*');
+    	}
+    	return starWord;
 	}
+	
+	//first stars
+	starWord = loop(starWord);
 
 	//concat word
 	starWord = starWord.concat(word);
 
+
 	//end stars
-	for (var i = 0; i < num; i++ ){
-		starWord = starWord.concat('*');
-	}	
+    starWord = loop(starWord);
 
 	return starWord;	
 }
+
+/////////////////////////
+//jacob's non working example of scope for me
+
+var loop = function(word, num){
+  var newthing;
+		for (var i = 0; i < num; i++ ){
+			newthing = word.concat('*');
+		}
+    return newthing;
+	}
+
+function addStars(word, num) {
+
+
+	//first stars
+	var something = loop("", num);
+
+	var starWord = something.concat(word);
+
+	//end stars
+	var something2 = loop(starWord, num);
+
+	console.log(something2);
+	return something2;	
+}
+
+addStars("jacob", 3);
