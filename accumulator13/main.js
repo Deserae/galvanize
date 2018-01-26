@@ -19,20 +19,19 @@ var students = [
 ];
 
 for (var i = 0; i < students.length; i++){
-    var watchList = [];
-    console.log("first loop " + i);
+    var studentName = students[i].name;
+    var gradesArray = students[i].grades;
 
-    for (var grades in students){
-        console.log("second loop " + grades);
 
-        if (grades < 60){
-            watchList.push(students[i].name);
-
+    for (var j = 0; j < gradesArray.length; i++){
+        var watchList = [];
+        if (gradesArray[j] < 60){
+            watchList = watchList.push(studentName);
         }
-    }
-}
-console.log(watchList);
 
-//current status
-//--first loop looks like it's working as expected
-//--second loop isn't looping over grades
+     }
+
+}
+console.log("watchList " + watchList);
+
+//second loop is currently hanging
