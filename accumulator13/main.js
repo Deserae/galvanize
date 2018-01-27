@@ -21,12 +21,14 @@ var students = [
 for (var i = 0; i < students.length; i++){
     var studentName = students[i].name;
     var gradesArray = students[i].grades;
+    var watchList = [];
+    
+    for (var j = 0; j < gradesArray.length; j++){
 
-
-    for (var j = 0; j < gradesArray.length; i++){
-        var watchList = [];
+        console.log("before if" + watchList);
         if (gradesArray[j] < 60){
             watchList = watchList.push(studentName);
+            console.log("after array push" + watchList);
         }
 
      }
