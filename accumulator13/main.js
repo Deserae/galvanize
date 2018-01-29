@@ -18,22 +18,18 @@ var students = [
   }
 ];
 
+var watchList = [];
 for (var i = 0; i < students.length; i++){
     var studentName = students[i].name;
     var gradesArray = students[i].grades;
-    var watchList = [];
-    
+   
     for (var j = 0; j < gradesArray.length; j++){
 
-        console.log("before if" + watchList);
         if (gradesArray[j] < 60){
-            watchList = watchList.push(studentName);
-            console.log("after array push" + watchList);
+            watchList.push(studentName);
         }
 
      }
 
 }
 console.log("watchList " + watchList);
-
-//second loop is currently hanging
